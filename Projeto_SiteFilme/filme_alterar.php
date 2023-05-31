@@ -8,7 +8,7 @@
         $nome = $_POST['txtnome'];
         $img = $_POST['txtimg'];
         $sinopse = $_POST['txtsinopse'];
-        $nota = $_POST['txtnome'];
+        $nota = $_POST['txtnota'];
         $obs = $_POST['txtobs'];
         $status = $_POST['txtstatus'];
 
@@ -49,9 +49,9 @@
     }
     else
     {
-        header('Locatiom:###');
+        header('Locatiom:frm_filme.php');
     }
 
 ?>
 
-<a href="#">Voltar</a>
+<a href="frm_filme.php">Voltar</a>

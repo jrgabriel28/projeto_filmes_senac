@@ -1,14 +1,14 @@
 <?php
     include_once('testeconexao.php');
 
-    $idFilme = '';
-    $idCategoriaFilme = '';
-    $nomeFilme = '';
-    $imgFilme = '';
-    $sinopseFilme = '';
-    $notaFilme = '';
-    $obsFilme = '';
-    $statusFilme = '';
+    $idfilme = '';
+    $idcategoriafilme = '';
+    $nomefilme = '';
+    $imgfilme = '';
+    $sinopsefilme = '';
+    $notafilme = '';
+    $obsfilme = '';
+    $statusfilme = '';
 
     if($_POST)
     {
@@ -20,14 +20,14 @@
         {
             foreach ($sql as $row) 
             {
-                $idFilme=$row[0];
-                $idCategoriaFilme=$row[1];
-                $nomeFilme=$row[2];
-                $imgFilme=$row[3];
-                $sinopseFilme=$row[4];
-                $notaFilme=$row[5];
-                $obsFilme=$row[6];
-                $statusFilme=$row[7];
+                $idfilme=$row[0];
+                $idcategoriafilme=$row[1];
+                $nomefilme=$row[2];
+                $imgfilme=$row[3];
+                $sinopsefilme=$row[4];
+                $notafilme=$row[5];
+                $obsfilme=$row[6];
+                $statusfilme=$row[7];
             }
         }
         else

@@ -60,9 +60,9 @@
     }
     else
     {
-        header('Locatiom:###');
+        header('Locatiom:frm_filme.php');
     }
 
 ?>
 
-<a href="#">Voltar</a>
+<a href="frm_filme.php">Voltar</a>
