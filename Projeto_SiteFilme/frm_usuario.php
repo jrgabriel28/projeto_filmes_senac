@@ -20,34 +20,34 @@
             <h1>Usuário</h1>
         </div>
     </div>
-    <form action="" method="post">
-    .<div class="row mt-3">
-        .<div class="col-sm-2">
+    <form action="" method="post" class="form-control">
+    <div class="row mt-3">
+        <div class="col-sm-2">
             <input type="number" class = "form-control" min="0" name="txtid" placeholder="ID do Usuário" value="<?= $idusuario ?>">           
         </div>
-        .<div class="col-sm-2">
+        <div class="col-sm-2">
             <button class ="btn btn-primary" formaction="##">&#128269;</button> <!-- volte aqui quando o sistema estiver ok -->
         </div>
         <div class="col-sm-12">
             <input type="text" class = "form-control" name = "txtnome" placeholder ="Nome do Usuário" value = "<?=$nomeusuario?>"> 
         </div>
-        .<div class="col-sm-12">
+        <div class="col-sm-12">
             <input type="date" class = "form-control" name = "txtnascimento" placeholder = "data de nascimento" value="<?= substr($nascimentousuario, 0, 10) ?>">
         </div>
         
-        .<div class="col-sm-2">
+        <div class="col-sm-2">
             <input type = "text" class= "form-control" name="txtlogin" placeholder = "Login do Usuário" value="<?= $loginusuario ?>">
         </div>
 
-        .<div class="col-sm-2">
+        <div class="col-sm-2">
             <input type = "text" class = "form-control" name = "txtsenha" placeholder = "senha do Usuário" value = "<?= $senhausuario ?>">
         </div>
         
         <div class = "row mt-3">
-            .<div class="col-sm-8">
+            <div class="col-sm-8">
                 <input type = "file" class = "form-control" name = "txtimg" id = "txtimg" placeholder = "Imagem do Usuário" value = "<?= $imagemusuario ?>">
             </div>
-            .<div class="col-sm-4">
+            <div class="col-sm-4">
                 <div>
                 <select name="txtstatus" id="txtstatus" class="form-control">
                         <option value="">--Selecione um Status</option>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="row mt-3">
-            .<div class="col-sm-12">
+            <div class="col-sm-12">
                 <textarea name="txtobs" id= "txtobs" row="5" class = "form-control" placeholder = "Observação do Usuário"><?= $obsusuario ?></textarea>
             </div>
         </div>
