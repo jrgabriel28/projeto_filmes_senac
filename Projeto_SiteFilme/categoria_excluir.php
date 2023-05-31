@@ -17,11 +17,11 @@ if ($_POST) {
         echo $ex->getMessage();
     }
 }
-//else
-//{
-//  header('location:##.php');
-//}
-
-
+/*
+else
+{
+    header('location:##.php');
+}
+*/
 
 ?>

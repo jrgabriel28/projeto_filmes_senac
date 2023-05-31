@@ -7,7 +7,7 @@
 
         try {
             $sql = $conn->prepare("
-            delete from usuario where id_usuario=:id_usuario
+                delete from usuario where id_usuario=:id_usuario
             ");
 
             $sql->execute(array(
@@ -23,10 +23,12 @@
             echo $ex->getMessage();
         }
     }
+    /*
     else
     {
         header('Location:##');
     }
+    */
 ?>
 
 <hr>
