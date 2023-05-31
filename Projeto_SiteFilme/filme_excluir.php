@@ -1,34 +1,31 @@
 <?php
-    include_once('testeconexao.php');
+include_once('testeconexao.php');
 
-    if($_POST)
-    {
-        $id = $_POST['txtidfilme'];
+if ($_POST) {
+    $id = $_POST['txtidfilme'];
 
-        try 
+    try {
+        $sql = $conn->prepare("
+            delete from filme where id_filme=:id_filme
+        ");
+        
+        $sql->execute(array(
+            ':id_filme' => $id
+        ));
+
+        if ($sql->rowCount() >= 1) 
         {
-            $sql = $conn->prepare("
-                delete from filme where id_filme=:if_filme
-            ");
-            
-            $sql->execute(array(
-                ':id_filme'=>$id
-            ));
-
-            if($sql->rowCount()>=1)
-            {
-                echo '<p>Dados excluidos com sucesso</p>';
-            }
-
-        } catch (PDOException $ex) {
-            echo $ex->getMessage();
+            echo '<p>Dados Excluidos com sucesso! (espero que seja o que você queria fazer...)</p>';
         }
+
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
     }
-    else
-    {
-        header('Location:##');
-    }
+}
+//else
+//{
+//  header('location:##.php');
+//}
 
 ?>
 
-<a href="##">Voltar</a>
