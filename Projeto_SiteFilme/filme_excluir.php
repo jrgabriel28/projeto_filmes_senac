@@ -29,3 +29,5 @@ if ($_POST) {
 
 ?>
 
+<a href="frm_filme.php">Voltar</a>
+
