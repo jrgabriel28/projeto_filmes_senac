@@ -67,4 +67,4 @@
     }
 ?>
 
-<a href="#">Voltar lalalalala</a>
+<a href="frm_usuario.php">Voltar</a>

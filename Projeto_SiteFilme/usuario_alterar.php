@@ -55,6 +55,6 @@
     }
 ?>
 
-<a href="##">Voltar</a>
+<a href="frm_usuario.php">Voltar</a>
 
 
