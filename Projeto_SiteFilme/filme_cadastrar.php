@@ -5,7 +5,7 @@
     {
         $idcategoria = $_POST['txtidcategoria'];
         $nome = $_POST['txtnome'];
-        $img = $_POST['txtimg'];
+        $img = $_FILES['txtimg'];
         $sinopse = $_POST['txtsinopse'];
         $nota = $_POST['txtnome'];
         $obs = $_POST['txtobs'];
@@ -40,7 +40,7 @@
             $sql->execute(array(
                 ':id_categoria_filme'=>$idcategoria,
                 ':nome_filme'=>$nome,
-                ':img_filme'=>$imagem,
+                ':img_filme'=>$img,
                 ':sinopse_filme'=>$sinopse,
                 ':nota_filme'=>$nota,
                 ':obs_filme'=>$obs,
