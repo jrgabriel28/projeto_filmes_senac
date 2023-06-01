@@ -25,3 +25,5 @@ else
 */
 
 ?>
+
+<a href="frm_categoria.php">Voltar</a>

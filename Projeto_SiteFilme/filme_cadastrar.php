@@ -36,16 +36,18 @@
 
                 )
             ');
-            
+
             $sql->execute(array(
                 ':id_categoria_filme'=>$idcategoria,
                 ':nome_filme'=>$nome,
-                ':img_filme'=>$img,
+                ':img_filme'=>$imagem,
                 ':sinopse_filme'=>$sinopse,
                 ':nota_filme'=>$nota,
                 ':obs_filme'=>$obs,
                 ':status_filme'=>$status
             ));
+
+
 
             if($sql->rowCount()>=1)
             {
@@ -60,7 +62,7 @@
     }
     else
     {
-        header('Locatiom:frm_filme.php');
+        header('Locatiom:###');
     }
 
 ?>

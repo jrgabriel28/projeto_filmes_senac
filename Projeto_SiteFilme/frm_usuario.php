@@ -28,6 +28,7 @@
         <div class="col-sm-2">
             <button class ="btn btn-primary" formaction="##">&#128269;</button> <!-- volte aqui quando o sistema estiver ok -->
         </div>
+    <div class="row"></div>
         <div class="col-sm-12">
             <input type="text" class = "form-control" name = "txtnome" placeholder ="Nome do Usuário" value = "<?=$nomeusuario?>"> 
         </div>
@@ -40,7 +41,7 @@
         </div>
 
         <div class="col-sm-2">
-            <input type = "text" class = "form-control" name = "txtsenha" placeholder = "senha do Usuário" value = "<?= $senhausuario ?>">
+            <input type = "password" class = "form-control" name = "txtsenha" placeholder = "senha do Usuário" value = "<?= $senhausuario ?>">
         </div>
         
         <div class = "row mt-3">
@@ -69,7 +70,7 @@
             <button id="btnalterar" name = "btnalterar" class = "btn btn-secondary" formaction= "usuario_alterar.php">alterar</button> <!--volte aqui e insira uma tela-->
             <!-- <a href="##" name = "btolimpar" id= "btolimpar" class="btn btn-primary">Limpar</a> -->
             <button name = "btoexcluir" id= "btoexcluir" class= "btn btn-info" formaction= "usuario_excluir.php">Excluir</button>
-            <button name="btoLimpar" id="btoLimpar" class="btn btn-secundary" formaction="frm_usuarios.php">Limpar</button>
+            <a href="frm_usuario.php" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
             <button name = "btosair" id= "btosair" class = "btn btn-danger" formaction="frm_usuarios.php">Sair</button>
         </div>
     </div>

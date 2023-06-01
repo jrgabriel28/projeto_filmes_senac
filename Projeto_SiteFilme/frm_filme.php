@@ -76,7 +76,7 @@
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="filme_cadastrar.php">Cadastrar</button>
                     <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="filme_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secundary" formaction="frm_filme.php">Limpar</button>
+                    <a href="frm_filme.php" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
                     <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="filme_excluir.php">Excluir</button>
                     <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="frm_filme.php">Sair</button>
                 </div>
