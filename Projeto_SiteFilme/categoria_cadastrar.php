@@ -27,10 +27,10 @@ if ($_POST) {
 
         $sql->execute(
             array(
-                ':nome_categoria' => $nome,
-                ':descricao_categoria' => $desc,
-                ':obs_categoria' => $obs,
-                ':status_categoria' => $status
+                ':nome_categoria'=>$nome,
+                ':descricao_categoria'=>$desc,
+                ':obs_categoria'=>$obs,
+                ':status_categoria'=>$status
             )
         );
 
