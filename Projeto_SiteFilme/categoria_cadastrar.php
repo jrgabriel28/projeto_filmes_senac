@@ -25,14 +25,15 @@ if ($_POST) {
                 )
             ");
 
-            $sql->execute(
-                array(
-                    ':nome_categoria' => $nome,
-                    ':descricao_categoria' => $desc,
-                    ':obs_categoria' => $obs,
-                    ':status_categoria' => $status
-                )
-            );
+        $sql->execute(
+            array(
+                ':nome_categoria'=>$nome,
+                ':descricao_categoria'=>$desc,
+                ':obs_categoria'=>$obs,
+                ':status_categoria'=>$status
+            )
+        );
+
         if ($sql->rowCount() >= 1) {
             echo '<P> Categoria cadastrada com sucesso!</p>';
             echo '<p>ID gerado: ' . $conn->lastinsertid() . '</p>';

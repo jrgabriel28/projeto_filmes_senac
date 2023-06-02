@@ -7,7 +7,7 @@
         $nome = $_POST['txtnome'];
         $img = $_FILES['txtimg']['name'];
         $sinopse = $_POST['txtsinopse'];
-        $nota = $_POST['txtnome'];
+        $nota = $_POST['txtnota'];
         $obs = $_POST['txtobs'];
         $status = $_POST['txtstatus'];
 
