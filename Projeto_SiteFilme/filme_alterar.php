@@ -6,7 +6,7 @@
         $idfilme = $_POST['txtidfilme'];
         $idcategoria = $_POST['txtidcategoria'];
         $nome = $_POST['txtnome'];
-        $img = $_POST['txtimg'];
+        $img = $_FILES['txtimg']['name'];
         $sinopse = $_POST['txtsinopse'];
         $nota = $_POST['txtnota'];
         $obs = $_POST['txtobs'];

@@ -5,7 +5,7 @@
     {
         $idcategoria = $_POST['txtidcategoria'];
         $nome = $_POST['txtnome'];
-        $img = $_FILES['txtimg'];
+        $img = $_FILES['txtimg']['name'];
         $sinopse = $_POST['txtsinopse'];
         $nota = $_POST['txtnome'];
         $obs = $_POST['txtobs'];
