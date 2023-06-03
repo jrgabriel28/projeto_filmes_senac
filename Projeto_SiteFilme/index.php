@@ -11,7 +11,11 @@
     <?php include_once('testeconexao.php') ?>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <?php include_once('_home.php') ?>
+        </div>
+    </div>
 
     
 </body>
