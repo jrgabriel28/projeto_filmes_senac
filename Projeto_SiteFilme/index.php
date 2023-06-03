@@ -13,6 +13,10 @@
 <body>
     <div class="container">
         <div class="row">
+            <?php include_once('_topo.php') ?>
+        </div>
+        
+        <div class="row">
             <?php include_once('_home.php') ?>
         </div>
     </div>
