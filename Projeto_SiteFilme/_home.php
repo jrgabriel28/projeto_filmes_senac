@@ -6,19 +6,13 @@
     foreach ($sql as $row)
     {
         echo "
-            <div class='col-sm-4 text-center p-3'>
+            <div class='col-sm-3 text-center p-3'>
                 <a href='#'>
-                <div class='card'>
-                    <img src='$row[3]' class='cfilme'>
+                <div class='card text-center'>
+                    <img src = img/$row[3] class='cfilme'>
+                    <h3>$row[2]</h3>
+                    <h3 class='nota'>Nota:$row[5]</h3>
                 </div>
-                    <div class='row'>
-                        <div class='col-sm-3'>
-                            <h3>$row[2]</h3>
-                        </div>
-                        <div class='col-sm-1'>
-                            <h3>$row[5]</h3>
-                        </div>
-                    </div>    
                 </a>    
             </div>      
         ";
