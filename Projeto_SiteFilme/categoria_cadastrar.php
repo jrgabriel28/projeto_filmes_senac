@@ -9,7 +9,7 @@ if ($_POST) {
     
 
     try {
-        $sql = $conn->prepare('
+        $sql = $conn->prepare("
                 insert into categoria
                 (
                     nome_categoria,
@@ -24,14 +24,15 @@ if ($_POST) {
                     :obs_categoria,
                     :status_categoria
                 )
-            ');
+            ");
 
         $sql->execute(array(
-            ':nome_categoria'=>$nome,
-            ':descricao_categoria'=>$desc,
-            ':obs_categoria'=>$obs,
-            ':status_categoria'=>$status
-        ));
+            ':nome_categoria' => $nome,
+            ':descricao_categoria' => $desc,
+            ':obs_categoria' => $obs,
+            ':status_categoria' => $status));
+
+
 
         if($sql->rowCount()>=1)
         {
