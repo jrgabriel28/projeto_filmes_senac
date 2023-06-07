@@ -33,6 +33,11 @@ if ($_POST) {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> parent of cdcb024 (aa)
         if($sql->rowCount()>=1)
         {
             echo '<p>Dados cadastrados com sucesso!</p>';
@@ -51,4 +56,8 @@ else
 
 ?>
 
+<<<<<<< HEAD
 <a href="frm_categoria.php">Voltar</a>
+=======
+<a href="_sistema.php?tela=categoria">Voltar</a>
+>>>>>>> parent of cdcb024 (aa)
