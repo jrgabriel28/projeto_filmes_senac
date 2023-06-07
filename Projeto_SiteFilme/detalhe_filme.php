@@ -17,7 +17,7 @@
 
                 include_once('testeconexao.php');
                 
-                $sql = $conn->query('select * from filme where id_filme =' . $_GET["id"]);
+                $sql = $conn->query('select filme.*, categoria.nome_categoria from filme inner join categoria on categoria.id_categoria = filme.id_categoria_filme WHERE filme.id_filme = ' . $_GET["id"]);
 
                 foreach($sql as $row)
                 {
@@ -35,7 +35,7 @@
                         <div class ='col-sm-7 mt-3 '>
                             id: $row[0]
                             <hr>
-                            Id categoria: $row[1]
+                            Nome Categoria: $row[8]
                             <hr>
                             Sinopse do filme: $row[4]
                             <hr>

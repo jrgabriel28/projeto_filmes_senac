@@ -2,7 +2,11 @@
 include_once('testeconexao.php');
 
 if ($_POST) {
+<<<<<<< Updated upstream
     $nome = $_POST ['txtnome'];
+=======
+    $nome = $_POST['txtnome'];
+>>>>>>> Stashed changes
     $desc = $_POST['txtdesc'];
     $obs = $_POST['txtobs'];
     $status = $_POST['txtstatus'];
@@ -33,8 +37,7 @@ if ($_POST) {
             ':status_categoria'=>$status
         ));
 
-
-
+        
         if($sql->rowCount()>=1)
         {
             echo '<p>Dados cadastrados com sucesso!</p>';
@@ -54,3 +57,5 @@ else
 ?>
 
 <a href="_sistema.php?tela=categoria">Voltar</a>
+
+
