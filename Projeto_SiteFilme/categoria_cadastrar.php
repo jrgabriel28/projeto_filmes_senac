@@ -2,10 +2,10 @@
 include_once('testeconexao.php');
 
 if ($_POST) {
-    $nome = ['txtnome'];
-    $desc = ['txtdesc'];
-    $obs = ['txtobs'];
-    $status = ['txtstatus'];
+    $nome = $_POST ['txtnome'];
+    $desc = $_POST['txtdesc'];
+    $obs = $_POST['txtobs'];
+    $status = $_POST['txtstatus'];
     
 
     try {
