@@ -69,11 +69,7 @@
                         <div class ='col-sm-7 mt-3 '>
                             id: $row[0]
                             <hr>
-<<<<<<< HEAD
                             Id categoria: $nomecategoria
-=======
-                            Id categoria: $row[1]
->>>>>>> parent of cdcb024 (aa)
                             <hr>
                             Sinopse do filme: $row[4]
                             <hr>
