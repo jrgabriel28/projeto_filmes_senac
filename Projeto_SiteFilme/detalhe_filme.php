@@ -38,46 +38,25 @@
                                 <img src = img/$row[0]/$row[3] class='w-75' id='cfilme'>
                             </div>
                             <div class='col-sm-7 mt-3'>
-                                <div class='row'>
+                                <div class='row'> "/*sinopse*/"
                                     <div class='col-sm-12'>
                                         <p>$row[4]</p>
                                     </div>
                                 </div>
-                                <div class='row'>
+                                <div class='row'> "/*Categoria*/"
                                     <div class='col-sm-12'>
-                                        
+                                        <p>Categoria: $row[8]</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-
-
-                    "
-                    
-                    echo "
-                        <div class='row'>
-                            <div class='col-sm-5 text-center mt-3'>
-                                <h2>$row[2]</h2>
+                        <div class='row'> "/*Nota*/"
+                            <div classe='col-sm-5 text-center mt-3'>
+                                <h2>$row[5]</h2>
                             </div>
                         </div>
 
-                        <div class = 'col-sm-5 text-center mt-3'>
-                            <img src = img/$row[0]/$row[3] class='w-75' id='cfilme'>
-                        </div>
-                        <div class ='col-sm-7 mt-3 '>
-                            id: $row[0]
-                            <hr>
-                            Id categoria: $nomecategoria
-                            <hr>
-                            Sinopse do filme: $row[4]
-                            <hr>
-                            Nota do filme: $row[5]
-                            <hr>
-                            <hr>    
-                        </div>
-                    "; //lembre de trocar os valores das rows de acordo com o banco de dados.
+                    "
                 }
             ?>
         </div>

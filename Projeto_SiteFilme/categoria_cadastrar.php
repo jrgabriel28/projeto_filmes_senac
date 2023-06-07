@@ -33,11 +33,6 @@ if ($_POST) {
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> parent of cdcb024 (aa)
         if($sql->rowCount()>=1)
         {
             echo '<p>Dados cadastrados com sucesso!</p>';
