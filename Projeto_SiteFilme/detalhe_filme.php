@@ -39,21 +39,14 @@
                                 <img src = img/$row[0]/$row[3] class='w-75' id='cfilme'>
                             </div>
                             <div class='col-sm-7 mt-3'>
-                                <div class='row'> 
-                                    <div class='col-sm-12'>
-                                        <p>$row[4]</p>
-                                    </div>
-                                </div>
-                                <div class='row'> 
-                                    <div class='col-sm-12'>
-                                        <p>Categoria: $row[8]</p>
-                                    </div>
-                                </div>
+                                <p>$row[4]</p>
                             </div>
                         </div>
                         <div class='row'> 
                             <div classe='col-sm-5 text-center mt-3'>
-                                <h2>$row[5]</h2>
+                                <p>Nota:<b>$row[5]</b></p>
+                                <hr>
+                                <p>Categoria: $row[8]</p>
                             </div>
                         </div>
                     ";
