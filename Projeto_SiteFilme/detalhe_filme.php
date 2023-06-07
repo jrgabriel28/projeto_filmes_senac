@@ -11,41 +11,42 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container ">
         <div class="row">
-            <?php
-            include_once('testeconexao.php');
+            <?php include_once('_topo.php'); 
 
-            $sql = $conn->query('select * from filme where id_filme =' . $_GET["id"]);
+                include_once('testeconexao.php');
+                
+                $sql = $conn->query('select * from filme where id_filme =' . $_GET["id"]);
 
-            foreach ($sql as $row)
-             {
-                echo "
-                    <div class = 'col-sm-3 text-center p-3'>
-                      
-                    </div>
-                    <div class ='col-sm-9-p3'>
-                        <h3>id: $row[0] </h3>
-                        <hr>
-                        <h3>id categoria: $row[1] </h3>
-                        <hr>
-                        <h3>Nome do filme: $row[2] </h3>
-                        <hr>
-                        <h3>  <img src='$row[3]' class = 'w-50'</h3>
-                        <hr>
-                        <h3>Sinopse do filme: $row[4]</h3>
-                        <hr>
-                        <h3>Nota do filme: $row[5]</h3>
-                        <hr>
-                        <h3>Observação: $row[6]</h3>
-                        <hr>    
-                        <h3>Status do filme $row[7]</h3>
-                    </div>
-                "; //lembre de trocar os valores das rows de acordo com o banco de dados.
-            }
+                {
+                    
+                    echo "
+                        <div class='row'>
+                            <div class='col-sm-5 text-center mt-3'>
+                                <h2>$row[2]</h2>
+                            </div>
+                        </div>
 
+                        <div class = 'col-sm-5 text-center mt-3'>
+                            <img src = img/$row[0]/$row[3] class='w-75' id='cfilme'>
+                        </div>
+                        <div class ='col-sm-7 mt-3 '>
+                            id: $row[0]
+                            <hr>
+                            Id categoria: $nomecategoria
+                            <hr>
+                            Sinopse do filme: $row[4]
+                            <hr>
+                            Nota do filme: $row[5]
+                            <hr>
+                            <hr>    
+                        </div>
+                    "; //lembre de trocar os valores das rows de acordo com o banco de dados.
+                }
             ?>
         </div>
+        <a href="index.php">Voltar para home</a>
     </div>
 
 </body>

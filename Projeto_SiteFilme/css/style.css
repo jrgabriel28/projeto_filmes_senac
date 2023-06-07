@@ -3,6 +3,39 @@
     width: 70px;
 }
 
+.topo{
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: blueviolet;
+}
+
+.logo{
+    height: 100px;
+    width: 200px;
+    margin: auto;
+    line-height: 100px;
+    text-align: center;
+    background-color: aquamarine;
+
+}
+
 #nota{
     text-align: end;
+}
+
+.a{
+    text-decoration: none;
+}
+
+.BrrMenu{
+    padding: 15px;
+    background-color: aqua;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.BrrMenu:hover{
+    background-color: black;
+    color: aqua;
 }

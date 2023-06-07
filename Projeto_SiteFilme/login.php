@@ -34,7 +34,7 @@
                         $_SESSION['loginusuario'] = $row[4];
                         $_SESSION['imgusuario'] = $row[6];
 
-                        //header('Location:usuario_cadastrar.php');
+                        header('Location:_sistema.php');
                     }
                 }
                 else{

@@ -23,13 +23,13 @@
             echo $ex->getMessage();
         }
     }
-    /*
+    
     else
     {
-        header('Location:##');
+        header('Location:_sistema.php?tela=usuario');
     }
-    */
+    
 ?>
 
 <hr>
-<a href="frm_usuario.php">Voltar</a>
+<a href="_sistema.php?tela=usuario">Voltar</a>

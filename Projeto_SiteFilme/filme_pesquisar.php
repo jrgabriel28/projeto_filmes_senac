@@ -3,6 +3,7 @@
 
     $idfilme = '';
     $idcategoriafilme = '';
+    $nomecategorifilme = '';
     $nomefilme = '';
     $imgfilme = '';
     $sinopsefilme = '';
@@ -29,6 +30,13 @@
                 $obsfilme=$row[6];
                 $statusfilme=$row[7];
             }
+
+            $sql = $conn->query('select * from categoria where id_categoria='.$idcategoriafilme);
+            
+                foreach ($sql as $row) 
+                {
+                    $nomecategorifilme=$row[1];
+                }
         }
         else
         {

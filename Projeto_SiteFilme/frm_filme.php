@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <?php include_once('testeconexao.php') ?>
-    <?php include_once('filme_pesquisar.php') ?>
-</head>
-
-<body>
+<?php include_once('filme_pesquisar.php') ?>
     <div class="container mt-3">
         <div class="row mt-3">
             <div class="col-sm-12">
@@ -29,7 +15,7 @@
                 </div>
                 <div class="col-sm-4">
                     <button class="btn btn-primary" name="btopesquisar" id="btopesquisar"
-                        formaction="frm_filme.php">&#128269;</button>
+                        formaction="_sistema.php?tela=filme">&#128269;</button>
                 </div>
             </div>
             <!-- Nome do filme + nota -->
@@ -46,7 +32,7 @@
             <!-- Categoria + Id da categoria + status  -->
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtcategoria" id="txtnome" placeholder="Categoria">
+                    <input type="text" class="form-control" name="txtcategoria" id="txtnome" placeholder="Categoria" value="<?= $nomecategorifilme?>">
                 </div>
                 <div class="col-sm-4">
                     <input type="number" class="form-control" name="txtidcategoria" min="0"
@@ -64,22 +50,7 @@
             <div class="row mt-3">
                 <div class="col-sm-6">
                     <input type="file" class="form-control" name="txtimg" id="txtimg" placeholder="Imagem do filme">
-                    <input type="submit" class="form-control" name="submit" value="Enviar">
-                    <?php
-
-                    if ($_POST) {
-                        $caminho = './img/';
-                        $arquivo = $caminho . basename($_FILES['txtimg']['name']);
-                        move_uploaded_file($_FILES['txtimg']['tmp_name'], $arquivo);
-
-                        if(isset($_POST['btopesquisar']))
-                        {
-                            echo '<img src ="./img/' . $imgfilme .'" class="w-50 mt-auto">'; 
-                        }
-
-                    }
-                    ?>
-
+                    <img src="img/<?=$idfilme?>/<?=$imgfilme?>" class="w-50 mt-3 text-center" alt="Capa do filme">
                 </div>
                 <div class="col-sm-6">
                     <textarea name="txtsinopse" id="txtsinopse" rows="5" class="form-control" formaction=""
@@ -96,19 +67,12 @@
             <!-- Botões -->
             <div class="row mt-3">
                 <div class="col-sm-12 text-end">
-                    <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary"
-                        formaction="filme_cadastrar.php">Cadastrar</button>
-                    <button name="btoAlterar" id="btoAlterar" class="btn btn-danger"
-                        formaction="filme_alterar.php">Alterar</button>
-                    <a href="frm_filme.php" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
-                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning"
-                        formaction="filme_excluir.php">Excluir</button>
-                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning"
-                        formaction="frm_filme.php">Sair</button>
+                    <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary"formaction="filme_cadastrar.php">Cadastrar</button>
+                    <button name="btoAlterar" id="btoAlterar" class="btn btn-danger"formaction="filme_alterar.php">Alterar</button>
+                    <a href="_sistema.php?tela=filme" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
+                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="filme_excluir.php">Excluir</button>
+                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="_sistema.php?tela=nada">Sair</button>
                 </div>
             </div>
         </form>
     </div>
-</body>
-
-</html>

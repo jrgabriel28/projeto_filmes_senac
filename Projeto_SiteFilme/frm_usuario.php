@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include_once('usuario_pesquisar.php') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <?php include_once('testeconexao.php') ?>
-    <?php include_once('usuario_pesquisar.php') ?>
-</head>
-
-<body>
-
-</body>
-
-</html>
 <div class="container" mt-3>
     <div class="row mt-3">
         <div class="col-sm-12">
@@ -30,7 +13,7 @@
                     value="<?= $idusuario ?>">
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-primary" formaction="##">&#128269;</button>
+                <button class="btn btn-primary" formaction="_sistema.php?tela=usuario">&#128269;</button>
                 <!-- volte aqui quando o sistema estiver ok -->
             </div>
             <div class="row"></div>
@@ -80,16 +63,13 @@
                 <button name="btocadastrar" id="btocadastrar" class="btn btn-sucess"
                     formaction="usuario_cadastrar.php">cadastrar</button> <!----- coloque a tela para cadastrar aqui -->
                 <button id="btnalterar" name="btnalterar" class="btn btn-secondary"
-                    formaction="usuario_alterar.php">alterar</button> <!--volte aqui e insira uma tela-->
+                    formaction="_sistema.php?tela=usuario">alterar</button> <!--volte aqui e insira uma tela-->
                 <!-- <a href="##" name = "btolimpar" id= "btolimpar" class="btn btn-primary">Limpar</a> -->
                 <button name="btoexcluir" id="btoexcluir" class="btn btn-info"
                     formaction="usuario_excluir.php">Excluir</button>
-                <a href="frm_usuario.php" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
-                <button name="btosair" id="btosair" class="btn btn-danger" formaction="frm_usuarios.php">Sair</button>
+                <a href="_sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
+                <button name="btosair" id="btosair" class="btn btn-danger" formaction="_sistema.php?tela=nada">Sair</button>
             </div>
         </div>
-
-
-
     </form>
 </div>

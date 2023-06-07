@@ -5,7 +5,7 @@
     {
         $idcategoria = $_POST['txtidcategoria'];
         $nome = $_POST['txtnome'];
-        $img = $_FILES['txtimg']['name'];
+        $img = '';
         $sinopse = $_POST['txtsinopse'];
         $nota = $_POST['txtnota'];
         $obs = $_POST['txtobs'];
@@ -13,6 +13,16 @@
 
         try 
         {
+            if (isset($_FILES['txtimg'])) 
+            {
+                $img = $_FILES['txtimg'];    
+            }
+            else
+            {
+                echo 'Erro, a imagem deve ser enviada';
+                return;
+            }
+
             $sql = $conn->prepare('
                 insert into filme
                 (
@@ -40,7 +50,7 @@
             $sql->execute(array(
                 ':id_categoria_filme'=>$idcategoria,
                 ':nome_filme'=>$nome,
-                ':img_filme'=>$img,
+                ':img_filme'=>$img['name'],
                 ':sinopse_filme'=>$sinopse,
                 ':nota_filme'=>$nota,
                 ':obs_filme'=>$obs,
@@ -53,6 +63,18 @@
             {
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: '.$conn->lastInsertId().'</p>';
+
+                $pasta = 'img/'.$conn->lastInsertId().'/';
+
+                if (!file_exists($pasta)) 
+                {
+                    mkdir($pasta);
+                }
+
+                $capa = $pasta.$img['name'];
+
+                move_uploaded_file($img['tmp_name'],$capa);
+
             }
 
         } catch (PDOException $ex) {
@@ -62,9 +84,9 @@
     }
     else
     {
-        header('Locatiom:###');
+        header('Locatiom:_sistema.php?tela=filme');
     }
 
 ?>
 
-<a href="frm_filme.php">Voltar</a>
+<a href="_sistema.php?tela=filme">Voltar</a>

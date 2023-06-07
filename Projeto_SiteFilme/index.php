@@ -15,6 +15,10 @@
         <div class="row">
             <?php include_once('_topo.php') ?>
         </div>
+
+        <div class="row">
+            <?php include_once('_menu2.php')?>
+        </div>
         
         <div class="row">
             <?php include_once('_home.php') ?>

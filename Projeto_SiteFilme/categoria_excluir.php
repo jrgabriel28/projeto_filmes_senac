@@ -17,13 +17,13 @@ if ($_POST) {
         echo $ex->getMessage();
     }
 }
-/*
+
 else
 {
-    header('location:##.php');
+    header('location:_sistema.php?tela=categoria');
 }
-*/
+
 
 ?>
 
-<a href="frm_categoria.php">Voltar</a>
+<a href="_sistema.php?tela=categoria">Voltar</a>

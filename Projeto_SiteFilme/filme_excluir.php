@@ -22,12 +22,12 @@ if ($_POST) {
         echo $ex->getMessage();
     }
 }
-//else
-//{
-//  header('location:##.php');
-//}
+else
+{
+    header('location:_sistema.php?tela=filme');
+}
 
 ?>
 
-<a href="frm_filme.php">Voltar</a>
+<a href="_sistema.php?tela=filme">Voltar</a>
 

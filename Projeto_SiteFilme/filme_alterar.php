@@ -14,6 +14,16 @@
 
         try 
         {
+            if (isset($_FILES['txtimg'])) 
+            {
+                $img = $_FILES['txtimg'];
+            }
+            else
+            {
+                $img = '';
+            }
+
+
             $sql = $conn->prepare("
                 update filme set
                     id_categoria_filme=:id_categoria_filme,
@@ -30,7 +40,7 @@
                 ':id_filme'=>$idfilme,
                 ':id_categoria_filme'=>$idcategoria,
                 ':nome_filme'=>$nome,
-                ':img_filme'=>$img,
+                ':img_filme'=>$img['name'],
                 ':sinopse_filme'=>$sinopse,
                 ':nota_filme'=>$nota,
                 ':obs_filme'=>$obs,
@@ -40,6 +50,17 @@
             if($sql->rowCount()>=1)
             {
                 echo '<p>Dados alterados com sucesso!</p>';
+
+                $pasta = 'img/'.$id.'/';
+                if (!file_exists($pasta)) 
+                {
+                    mkdir($pasta);
+                }
+
+                $capa = $pasta.$img['name'];
+
+                move_uploaded_file($img['tmp_name'],$capa);
+
             }
 
         } catch (PDOException $ex) {
@@ -49,9 +70,9 @@
     }
     else
     {
-        header('Locatiom:frm_filme.php');
+        header('Locatiom:_sistema.php?tela=filme');
     }
 
 ?>
 
-<a href="frm_filme.php">Voltar</a>
+<a href="_sistema.php?tela=filme">Voltar</a>
