@@ -2,16 +2,11 @@
 include_once('testeconexao.php');
 
 if ($_POST) {
-<<<<<<< Updated upstream
     $nome = $_POST ['txtnome'];
-=======
-    $nome = $_POST['txtnome'];
->>>>>>> Stashed changes
     $desc = $_POST['txtdesc'];
     $obs = $_POST['txtobs'];
     $status = $_POST['txtstatus'];
-    
-
+ 
     try {
         $sql = $conn->prepare("
                 insert into categoria
@@ -31,13 +26,13 @@ if ($_POST) {
             ");
 
         $sql->execute(array(
-            ':nome_categoria'=>$nome,
-            ':descricao_categoria'=>$desc,
-            ':obs_categoria'=>$obs,
-            ':status_categoria'=>$status
-        ));
+            ':nome_categoria' => $nome,
+            ':descricao_categoria' => $desc,
+            ':obs_categoria' => $obs,
+            ':status_categoria' => $status));
 
-        
+
+
         if($sql->rowCount()>=1)
         {
             echo '<p>Dados cadastrados com sucesso!</p>';
@@ -51,11 +46,9 @@ if ($_POST) {
 }
 else
 {
-    header('Locatiom:_sistema.php?tela=categoria');
+    header('Locatiom:frm_categoria.php');
 }
 
 ?>
 
-<a href="_sistema.php?tela=categoria">Voltar</a>
-
-
+<a href="frm_categoria.php">Voltar</a>
