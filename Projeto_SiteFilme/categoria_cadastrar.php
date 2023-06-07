@@ -27,10 +27,11 @@ if ($_POST) {
             ");
 
         $sql->execute(array(
-            ':nome_categoria' => $nome,
-            ':descricao_categoria' => $desc,
-            ':obs_categoria' => $obs,
-            ':status_categoria' => $status));
+            ':nome_categoria'=>$nome,
+            ':descricao_categoria'=>$desc,
+            ':obs_categoria'=>$obs,
+            ':status_categoria'=>$status
+        ));
 
 
 
@@ -47,9 +48,9 @@ if ($_POST) {
 }
 else
 {
-    header('Locatiom:frm_categoria.php');
+    header('Locatiom:_sistema.php?tela=categoria');
 }
 
 ?>
 
-<a href="frm_categoria.php">Voltar</a>
+<a href="_sistema.php?tela=categoria">Voltar</a>

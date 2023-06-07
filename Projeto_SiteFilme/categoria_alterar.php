@@ -39,9 +39,9 @@
     }
     else
     {
-        header('Locatiom:frm_categoria.php');
+        header('Locatiom:_sistema.php?tela=categoria');
     }
 
 ?>
 
-<a href="frm_categoria.php">Voltar</a>
+<a href="_sistema.php?tela=categoria">Voltar</a>
