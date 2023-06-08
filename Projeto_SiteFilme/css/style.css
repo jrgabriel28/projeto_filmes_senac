@@ -6,7 +6,15 @@
 .topo{
     height: 100px;
     margin-bottom: 10px;
-    background-color: blueviolet;
+    border-radius: 20px;
+    background-color: #292929;
+}
+
+#rodape{
+    margin-top: 10px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
 }
 
 .logo{
@@ -15,7 +23,8 @@
     margin: auto;
     line-height: 100px;
     text-align: center;
-    background-color: aquamarine;
+    color: red;
+    font-size: 50px;
 
 }
 
@@ -29,13 +38,41 @@
 
 .BrrMenu{
     padding: 15px;
-    background-color: aqua;
-    color: black;
+    background-color: #292929;
+    font-size: 20px;
+    font-weight: bold;
+    color: #D10101;
     border-radius: 5px;
     text-align: center;
+    text-decoration: none;
 }
 
 .BrrMenu:hover{
-    background-color: black;
-    color: aqua;
+    background-color: #D10101;
+    color: #292929;
+}
+
+#fund{
+    background-color: #ececec;
+}
+
+#modulo{
+    border-radius: 20px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+#edit{
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: #D10101;
+    color: #292929;
+}
+
+#edit:hover{
+    color:#D10101 ;
+    background-color:#4a4a4a ;
 }

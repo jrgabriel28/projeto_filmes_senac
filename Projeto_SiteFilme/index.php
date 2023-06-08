@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/bootstrap.js">
     <?php include_once('testeconexao.php') ?>
 </head>
-<body>
+<body id="fund">
     <div class="container">
         <div class="row">
             <?php include_once('_topo.php') ?>
