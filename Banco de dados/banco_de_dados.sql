@@ -27,6 +27,8 @@ create table categoria
 
 select * from categoria;
 
+
+
 create table filme
 (
 	id_filme int not null auto_increment primary key ,
@@ -41,3 +43,14 @@ create table filme
     Constraint FK_ID_Categoria_Filme foreign key(id_categoria_filme) references categoria(id_categoria)
 );
 
+alter table filme
+modify column sinopse_filme varchar(5000) not null;
+
+
+select * from categoria;
+select * from filme;
+
+
+select filme.*, categoria.nome_categoria from filme inner join categoria on categoria.id_categoria = filme.id_categoria_filme WHERE filme.id_filme = 12;
+
+select * from filme where id_filme = 21
